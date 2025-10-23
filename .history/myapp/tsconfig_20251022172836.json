@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
