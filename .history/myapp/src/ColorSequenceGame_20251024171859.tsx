@@ -1,0 +1,35 @@
+import { useEffect, useState } from "react"
+import { allColors } from "../data/allColors";    // data qovluğuna nisbətən
+import type { Color } from "../models/color.model";; // models qovluğuna nisbətən
+
+export default function ColorSequenceGame(){
+
+ const [colors,setColors]=useState<Color[]>([]);
+
+
+useEffect(() => {
+    const saveColors = async () => {
+      const data = await localStorage.getItem("colors");
+
+      if (!data) {
+        await localStorage.setItem("colors", JSON.stringify(allColors));
+        setColors(allColors);
+      } else {
+        setColors(JSON.parse(data));
+      }
+    };
+    saveColors();
+  }, []);
+
+    return( 
+        <div>
+      {colors.map((n) => (
+        <div className="flex gap-5" key={n.id}>
+          <p>{n.title}</p>
+          <p>{n.description}</p>
+          <p>{n.reminderTime}</p>
+        </div>
+      ))}
+    </div>
+    )
+}

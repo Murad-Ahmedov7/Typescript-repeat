@@ -1,17 +1,21 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./App.css";
-import ColorSequenceGame from "./ColorSequenceGame";
-import EasyLevel from "./EasyLevel";
+import { allNotes } from "../data/allNotes";
+import type { Note } from "../models/note.model";
 
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<ColorSequenceGame />}></Route>
-      <Route path="/level/easy" element={<EasyLevel/>}></Route>
+function App() {
 
-    </Routes>
-  );
-}
+ 
+
+export default App;
+
+//type inteface ve usesate ile deyisen ferqi
+
+// https://www.youtube.com/watch?v=jex--OwVycc
+
+//type
+
+//bir kompoenetde digerin kecme react native de var idi ona bax
 
 // Task: Color Sequence Game
 
@@ -30,7 +34,7 @@ export default function App() {
 
 // Əgər ardıcıllıq düzgündürsə → “Təbriklər! Növbəti səviyyə” və yeni random sıra.
 
-// Hər səviyyədə sıra 1 element artacaq (Level 1 → 4 rəng, Level 2 → 5 rəng …).
+  // Hər səviyyədə sıra 1 element artacaq (Level 1 → 4 rəng, Level 2 → 5 rəng …).
 
 // Logic-focus
 
@@ -45,3 +49,6 @@ export default function App() {
 // Timer əlavə edib “sıra x saniyə ərzində təkrarlanmalıdır”
 
 // Highscore logic əlavə edin (amma sadəcə logic, CRUD yox)
+
+
+
