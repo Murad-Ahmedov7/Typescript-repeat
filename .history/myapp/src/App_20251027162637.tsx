@@ -59,12 +59,6 @@ export default function App() {
 //i18 dil qos
 
 
-// https://chatgpt.com/c/68ff67bf-e650-8326-abef-8c70ec0f07ea
-
-
-//vm model islet ve kodu daha optiaml et ve bir componeet digeri otur bir ckompoenetde bildin de sen react nativede kimi
-
-
 
 
 // import { useEffect, useState } from "react";
